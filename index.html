@@ -51,14 +51,6 @@
             }
         }
 
-        /* Custom Background Pattern */
-        .bg-pattern {
-            background-color: #F2FBF5;
-            background-image: radial-gradient(#D0E3D6 1.5px, transparent 1.5px);
-            background-size: 24px 24px;
-            background-position: 0 0;
-        }
-
         /* Custom Font Adjustments to match design */
         .font-serif-custom {
             font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -71,7 +63,7 @@
         }
     </style>
 </head>
-<body class="bg-pattern min-h-screen font-sans text-[#062B14] overflow-x-hidden selection:bg-[#00FF66] selection:text-[#062B14]">
+<body class="bg-[#F2FBF5] min-h-screen font-sans text-[#062B14] overflow-x-hidden selection:bg-[#00FF66] selection:text-[#062B14]">
 
     <!-- Top Banner -->
     <div class="bg-[#E2FF66] w-full py-2.5 px-4 flex flex-col sm:flex-row justify-center items-center text-center text-[14px] font-medium text-[#062B14] z-50 relative animate-fade-in">
@@ -91,7 +83,12 @@
     <nav class="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-6 flex items-center justify-between animate-fade-in delay-0 relative z-10">
         <!-- Logo & Left Links -->
         <div class="flex items-center gap-10">
-            <a href="#" class="flex items-center gap-1">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-[#00FF66] rounded-lg flex items-center justify-center shadow-sm">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#062B14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
                 <span class="text-[28px] font-bold tracking-tighter leading-none text-[#062B14]">superscale</span>
             </a>
             
@@ -120,12 +117,10 @@
     <main class="relative z-10 pt-16 md:pt-24 pb-0 px-6 flex flex-col items-center text-center">
         
         <!-- Headline -->
-        <h1 class="max-w-[1100px] mx-auto text-[60px] md:text-[88px] lg:text-[116px] leading-[1.05] text-balance mb-6 animate-fade-in-up delay-100">
-            <span class="font-serif-custom font-normal block mb-1 md:mb-2 text-[#062B14]">Launch-ready</span>
-            <span class="font-sans-custom font-medium flex items-center justify-center flex-wrap gap-x-3 gap-y-2 text-[#062B14]">
-                AI video
-                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/c6213375-0613-4112-9e2a-749e263a65ca/hero-2-img-0-1772023713867.png" alt="AI Icon" class="w-[60px] h-[60px] md:w-[84px] md:h-[84px] lg:w-[100px] lg:h-[100px] rounded-[16px] md:rounded-[24px] shadow-sm object-cover mx-1 md:mx-2">
-                ads
+        <h1 class="max-w-[1100px] mx-auto text-[60px] md:text-[88px] lg:text-[116px] leading-[1.05] tracking-tight text-balance mb-6 animate-fade-in-up delay-100">
+            <span class="block mb-1 md:mb-2 text-[#062B14] font-bold">Launch-ready</span>
+            <span class="flex items-center justify-center flex-wrap gap-x-3 gap-y-2 text-[#062B14] font-bold">
+                AI video ads
             </span>
         </h1>
 
