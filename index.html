@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superscale - Launch-ready AI video ads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Custom Background Pattern */
+        .bg-pattern {
+            background-color: #F2FBF5;
+            background-image: radial-gradient(#D0E3D6 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            background-position: 0 0;
+        }
+
+        /* Custom Font Adjustments to match design */
+        .font-serif-custom {
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            letter-spacing: -0.03em;
+        }
+        
+        .font-sans-custom {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen font-sans text-[#062B14] overflow-x-hidden selection:bg-[#00FF66] selection:text-[#062B14]">
+
+    <!-- Top Banner -->
+    <div class="bg-[#E2FF66] w-full py-2.5 px-4 flex flex-col sm:flex-row justify-center items-center text-center text-[14px] font-medium text-[#062B14] z-50 relative animate-fade-in">
+        <span>New! Overcome creative fatigue with rapid, automated ad iteration and variations.</span>
+        <a href="#" class="mt-2 sm:mt-0 sm:ml-3 inline-flex items-center gap-1 bg-white px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase hover:bg-gray-50 transition-colors">
+            Learn More
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Background Overlay for depth -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_center,rgba(255,255,255,0.6)_0%,transparent_80%)] pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-6 flex items-center justify-between animate-fade-in delay-0 relative z-10">
+        <!-- Logo & Left Links -->
+        <div class="flex items-center gap-10">
+            <a href="#" class="flex items-center gap-1">
+                <span class="text-[28px] font-bold tracking-tighter leading-none text-[#062B14]">superscale</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-[15px] font-medium hover:opacity-70 transition-opacity">Platform</a>
+                <a href="#" class="text-[15px] font-medium hover:opacity-70 transition-opacity">Solutions</a>
+                <a href="#" class="text-[15px] font-medium hover:opacity-70 transition-opacity">Resources</a>
+                <a href="#" class="text-[15px] font-medium hover:opacity-70 transition-opacity">Pricing</a>
+            </div>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4 md:gap-6">
+            <a href="#" class="hidden md:block text-[15px] font-medium hover:opacity-70 transition-opacity">Log In</a>
+            <a href="#" class="hidden md:block px-5 py-2.5 bg-[#F0F5F2] text-[15px] font-medium rounded-lg hover:bg-[#E4EBE7] transition-colors duration-200">Start Free Trial</a>
+            <a href="#" class="flex items-center gap-1.5 px-5 py-2.5 bg-[#00FF66] text-[15px] font-medium rounded-full hover:opacity-90 transition-all duration-200 active:scale-97">
+                Get Started
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 pt-16 md:pt-24 pb-0 px-6 flex flex-col items-center text-center">
+        
+        <!-- Headline -->
+        <h1 class="max-w-[1100px] mx-auto text-[60px] md:text-[88px] lg:text-[116px] leading-[1.05] text-balance mb-6 animate-fade-in-up delay-100">
+            <span class="font-serif-custom font-normal block mb-1 md:mb-2 text-[#062B14]">Launch-ready</span>
+            <span class="font-sans-custom font-medium flex items-center justify-center flex-wrap gap-x-3 gap-y-2 text-[#062B14]">
+                AI video
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/c6213375-0613-4112-9e2a-749e263a65ca/hero-2-img-0-1772023713867.png" alt="AI Icon" class="w-[60px] h-[60px] md:w-[84px] md:h-[84px] lg:w-[100px] lg:h-[100px] rounded-[16px] md:rounded-[24px] shadow-sm object-cover mx-1 md:mx-2">
+                ads
+            </span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="max-w-[780px] mx-auto text-[18px] md:text-[22px] leading-[1.5] text-pretty mb-10 text-[#062B14]/80 animate-fade-in-up delay-200">
+            Superscale delivers launch-ready AI video ads by extracting structure from top-performing competitor formats using modular templates.
+        </p>
+
+        <!-- CTA -->
+        <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-[#00FF66] text-[#062B14] text-[17px] font-medium rounded-full hover:opacity-90 transition-all duration-200 active:scale-97 mb-20 animate-fade-in-up delay-300">
+            Book a Demo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+
+        <!-- Video/Image Placeholder Block -->
+        <div class="w-full max-w-[1080px] mx-auto h-[320px] md:h-[540px] bg-black rounded-t-[24px] relative overflow-hidden animate-scale-in delay-400 shadow-2xl">
+            <!-- Speaker Icon -->
+            <button class="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors duration-200" aria-label="Toggle sound">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                </svg>
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>
