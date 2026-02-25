@@ -1,0 +1,2 @@
+# c6213375-0613-4112-9e2a-749e263a65ca-hero-2
+Hero section variant 2 for c6213375-0613-4112-9e2a-749e263a65ca
